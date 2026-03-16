@@ -1,0 +1,21 @@
+font family to use:
+
+.onest-<uniquifier> {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+font color to use: #1C5E3C
+
+I want the hero to be similar to the image called hero.png, as I dont have the images to provide you, I think we could just put some blurred blobs in the background
+instead of an image, like the image hero_blobs which shows a hero section with the blobs in the background
+
+
+For the tech stack, I want you to use nextjs, typescript, tailwindcss, and shadcn ui, and for the animations, I want you to use framer-motion, and for the icons, I want you to use lucide-react
+I want it to be responsive, SEO-friendly too.
