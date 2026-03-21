@@ -9,10 +9,10 @@ export function TypedText() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Landing Pages",
-        "Sistemas ERP",
-        "CRM",
-        "Automações"
+        "em Landing Pages",
+        "em Sistemas ERP",
+        "em CRM",
+        "em Automações"
       ],
       typeSpeed: 80,
       backSpeed: 50,
@@ -28,7 +28,7 @@ export function TypedText() {
   }, []);
 
   return (
-    <span className="text-[#A5A69E] inline-block">
+    <span className="text-brand-muted inline-block whitespace-nowrap">
       <span ref={el} />
     </span>
   );

@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect, useRef } from "react";
 import Script from "next/script";
+import { brandColors } from "@/lib/theme";
 
 export function ParticlesBackground() {
   const isLoaded = useRef(false);
@@ -19,7 +21,7 @@ export function ParticlesBackground() {
       window.particlesJS("particles-js", {
         particles: {
           number: { value: 60, density: { enable: true, value_area: 800 } },
-          color: { value: "#F05B43" },
+          color: { value: brandColors.primary },
           shape: {
             type: "circle",
           },
@@ -34,7 +36,7 @@ export function ParticlesBackground() {
           line_linked: {
             enable: true,
             distance: 150,
-            color: "#F05B43",
+            color: brandColors.primary,
             opacity: 0.4,
             width: 1,
           },

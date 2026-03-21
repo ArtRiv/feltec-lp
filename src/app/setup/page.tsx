@@ -14,12 +14,12 @@ export default function SetupPage() {
         <motion.div
           animate={{ scale: [1, 1.2, 1], x: [0, -50, 0], y: [0, 50, 0] }}
           transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#F05B43] rounded-full filter blur-[150px] opacity-40"
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-primary rounded-full filter blur-[150px] opacity-40"
         />
         <motion.div
           animate={{ scale: [1, 1.5, 1], x: [0, 50, 0], y: [0, -30, 0] }}
           transition={{ duration: 12, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-1/4 left-10 w-[400px] h-[400px] bg-[#F05B43] rounded-full filter blur-[150px] opacity-20"
+          className="absolute bottom-1/4 left-10 w-[400px] h-[400px] bg-brand-primary rounded-full filter blur-[150px] opacity-20"
         />
       </div>
 
@@ -36,7 +36,7 @@ export default function SetupPage() {
         </Link>
         <div className="flex items-center gap-2">
           <span className="text-xl font-medium tracking-tight text-white">
-            Feltech
+            Feltec
           </span>
         </div>
       </nav>

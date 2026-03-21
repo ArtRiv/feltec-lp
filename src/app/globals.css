@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -56,9 +60,43 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* =============================================
+     Cores da marca — edite aqui para mudar tudo
+     ============================================= */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-green: var(--brand-green);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-paragraph: var(--brand-paragraph);
+  --color-brand-body: var(--brand-body);
+  --color-brand-subtle: var(--brand-subtle);
+  /* Cards dos Serviços */
+  --color-service-1: var(--service-1);
+  --color-service-2: var(--service-2);
+  --color-service-3: var(--service-3);
+  --color-service-4: var(--service-4);
 }
 
 :root {
+  /* =============================================
+     Cores da marca — MUDE APENAS AQUI!
+     ============================================= */
+  --brand-primary:   #F05B43;  /* Laranja — cor principal (botões, destaques, bordas) */
+  --brand-dark:      #161616;  /* Fundo escuro */
+  --brand-green:     #1C5E3C;  /* Verde — destaque */
+  --brand-muted:     #A5A69E;  /* Texto apagado */
+  --brand-surface:   #BDBDBA;  /* Bege — seção Serviços */
+  --brand-paragraph: #858585;  /* Texto de parágrafos */
+  --brand-body:      #464646;  /* Texto médio */
+  --brand-subtle:    #656565;  /* Texto sutil */
+  --service-1: #778B89;
+  --service-2: #8CC99D;
+  --service-3: #92A7C3;
+  --service-4: #D29EEB;
+  /* ============================================= */
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -100,7 +138,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #F05B43;
+  --primary: var(--brand-primary);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.205 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -111,7 +149,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: #F05B43;
+  --ring: var(--brand-primary);
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -119,12 +157,12 @@
   --chart-5: oklch(0.424 0.199 265.638);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: #F05B43;
+  --sidebar-primary: var(--brand-primary);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: #F05B43;
+  --sidebar-ring: var(--brand-primary);
 }
 
 @layer base {
@@ -140,6 +178,11 @@
 }
 
 @layer utilities {
+  /* Glows reativos à cor principal — atualizam automaticamente */
+  .glow-brand-badge { box-shadow: 0 0 20px color-mix(in srgb, var(--color-brand-primary) 15%, transparent); }
+  .glow-brand-sm    { box-shadow: 0 0 15px color-mix(in srgb, var(--color-brand-primary) 40%, transparent); }
+  .glow-brand       { box-shadow: 0 0 20px color-mix(in srgb, var(--color-brand-primary) 30%, transparent); }
+  .glow-brand-lg    { box-shadow: 0 0 30px color-mix(in srgb, var(--color-brand-primary) 50%, transparent); }
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
   }

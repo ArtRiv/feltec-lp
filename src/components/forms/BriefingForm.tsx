@@ -96,12 +96,12 @@ const BriefingForm = () => {
     const q1 = answers[1]?.trim();
     if (!q1) {
       toast.error("Por favor, responda a pergunta obrigatória (Pergunta 1).", {
-        className: "bg-[#161616] border-white/10 text-white",
+        className: "bg-brand-dark border-white/10 text-white",
       });
       return;
     }
     toast.success("Briefing enviado com sucesso!", {
-      className: "bg-[#161616] border-[#F05B43] text-white",
+        className: "bg-brand-dark border-brand-primary text-white",
     });
     console.log("Respostas:", answers);
   };
@@ -113,7 +113,7 @@ const BriefingForm = () => {
           Briefing E-commerce
         </div>
         <h1 className="text-4xl md:text-5xl font-medium text-white tracking-tight">
-          Questionário de <span className="text-[#F05B43]">Planejamento</span>
+          Questionário de <span className="text-brand-primary">Planejamento</span>
         </h1>
         <p className="text-white/60 max-w-xl mx-auto text-lg leading-relaxed">
           Preencha as informações abaixo para que possamos entender melhor as necessidades do seu projeto de e-commerce e entregar o melhor resultado.
@@ -128,14 +128,14 @@ const BriefingForm = () => {
                 <label htmlFor={`q-${item.id}`} className="block text-sm font-medium text-white/80 group-hover:text-white transition-colors duration-200">
                   <span className="text-white/40 mr-2">{item.id}.</span>
                   {item.q}
-                  {item.required && <span className="text-[#F05B43] ml-1.5">*</span>}
+                  {item.required && <span className="text-brand-primary ml-1.5">*</span>}
                 </label>
                 <Textarea
                   id={`q-${item.id}`}
                   placeholder="Descreva sua resposta aqui..."
                   value={answers[item.id] || ""}
                   onChange={(e) => handleChange(item.id, e.target.value)}
-                  className="min-h-[100px] bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:border-[#F05B43] focus-visible:ring-[#F05B43]/20 resize-y transition-all hover:bg-white/10"
+                  className="min-h-[100px] bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:border-brand-primary focus-visible:ring-brand-primary/20 resize-y transition-all hover:bg-white/10"
                 />
               </div>
             ))}
@@ -146,7 +146,7 @@ const BriefingForm = () => {
           <Button 
             type="submit" 
             size="lg" 
-            className="w-full sm:w-auto px-10 h-12 rounded-full bg-[#F05B43] hover:bg-[#F05B43]/90 text-white font-medium text-sm transition-all shadow-[0_0_20px_rgba(240,91,67,0.3)] hover:shadow-[0_0_30px_rgba(240,91,67,0.5)]"
+            className="w-full sm:w-auto px-10 h-12 rounded-full bg-brand-primary hover:bg-brand-primary/90 text-white font-medium text-sm transition-all glow-brand hover:glow-brand-lg"
           >
             Enviar Briefing
           </Button>

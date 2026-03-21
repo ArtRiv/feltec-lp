@@ -8,7 +8,7 @@ const clients = [
 
 export function Clients() {
     return (
-        <section id="clients" className="relative w-full bg-[#161616] py-20 px-6 overflow-hidden border-t border-white/5">
+        <section id="clients" className="relative w-full bg-brand-dark py-20 px-6 overflow-hidden border-t border-white/5">
             <div className="max-w-7xl mx-auto relative z-10">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -32,14 +32,14 @@ export function Clients() {
                     <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                         {clients.map((client, idx) => (
                             <li key={idx} className="flex items-center gap-3 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-                                <Code className="w-6 h-6 text-[#1C5E3C]" />
+                                <Code className="w-6 h-6 text-brand-green" />
                                 <span className="text-xl font-medium text-white">{client}</span>
                             </li>
                         ))}
                         {/* Duplicate for infinite scroll */}
                         {clients.map((client, idx) => (
                             <li key={`dup-${idx}`} className="flex items-center gap-3 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-                                <Code className="w-6 h-6 text-[#1C5E3C]" />
+                                <Code className="w-6 h-6 text-brand-green" />
                                 <span className="text-xl font-medium text-white">{client}</span>
                             </li>
                         ))}

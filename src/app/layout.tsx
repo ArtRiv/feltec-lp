@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Feltech",
+  title: "Feltec",
   description: "Soluções tecnológicas como landing pages, ERPs, CRMs, automações de processos e muito mais.",
 };
 
