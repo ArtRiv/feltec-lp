@@ -3,7 +3,7 @@
  * As mesmas cores estão em globals.css (@theme inline) para as classes Tailwind.
  */
 export const brandColors = {
-  primary: "#F05B43",   // Laranja — cor principal
+  primary: "#f05b43",   // Laranja — cor principal
   dark: "#161616",      // Fundo escuro
   green: "#1C5E3C",     // Verde — destaque
   muted: "#A5A69E",     // Texto apagado
