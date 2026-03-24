@@ -143,7 +143,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-brand-primary text-foreground p-1 md:p-2 font-sans">
       <Hero />
-      <div className="bg-brand-dark mt-4 shadow-2xl relative z-10 rounded-[2rem] overflow-hidden">
+      <div className="bg-brand-dark mt-3 shadow-2xl relative z-10 rounded-[2rem] overflow-hidden">
         <Clients />
         <Services />
         <Contact />
