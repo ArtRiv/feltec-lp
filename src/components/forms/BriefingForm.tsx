@@ -38,51 +38,73 @@ const steps: Step[] = [
       { type: "textarea", name: "q1", label: "Quais produtos serão vendidos na plataforma?", required: true },
       { type: "textarea", name: "q2", label: "Quantas e quais variações (cor, tamanho, modelo) cada produto terá?" },
       { type: "text", name: "q3", label: "Haverá produtos digitais, físicos ou ambos?" },
-      { type: "text", name: "q9", label: "Como os produtos serão categorizados?" },
+      { type: "text", name: "q9", label: "Como os produtos serão categorizados? (tipos de produtos vendidos)" },
+      { type: "text", name: "q12", label: "Haverá uma opção de 'customize seu produto'?" },
+      { type: "textarea", name: "q22", label: "Quais categorias de produtos serão exibidas?" },
+      { type: "text", name: "q36", label: "Haverá categorias especiais como 'Lançamentos' e 'Mais Vendidos'?" },
     ],
   },
   {
     title: "Promoções e Marketing",
     fields: [
-      { type: "text", name: "q10", label: "Haverá necessidade de criar e gerenciar cupons de desconto?" },
-      { type: "textarea", name: "q11", label: "Quais tipos de promoções serão oferecidas?" },
-      { type: "text", name: "q14", label: "Haverá restrições de uso para os cupons?" },
+      { type: "text", name: "q6", label: "Haverá a necessidade de criar e gerenciar cupons de desconto?" },
+      { type: "textarea", name: "q7", label: "Quais tipos de promoções serão oferecidas (desconto percentual, frete grátis, compre 1 e leve 2)?" },
+      { type: "textarea", name: "q8", label: "Como os clientes serão informados sobre as promoções?" },
+      { type: "text", name: "q13", label: "Terá alguma configuração de descontos por quantidade?" },
+      { type: "text", name: "q14", label: "Haverá restrições de uso para os cupons (data de validade, produtos específicos)?" },
     ],
   },
   {
     title: "Experiência de Compra",
     fields: [
-      { type: "text", name: "q15", label: "Como será a navegação por filtros (preço, marca, etc.)?" },
-      { type: "text", name: "q18", label: "Haverá funcionalidade de carrinho abandonado com lembretes?" },
+      { type: "text", name: "q5", label: "Haverá um sistema de avaliações e comentários para produtos?" },
+      { type: "text", name: "q10", label: "Como será a navegação por filtros (por preço, por marca, etc.)?" },
+      { type: "text", name: "q11", label: "Haverá um limite de quantidade de produtos que um cliente pode adicionar ao carrinho?" },
+      { type: "text", name: "q19", label: "O carrinho permitirá salvar produtos para compra futura?" },
+      { type: "text", name: "q25", label: "Haverá uma seção de depoimentos ou avaliações de clientes?" },
+      { type: "text", name: "q26", label: "Haverá uma seção de perguntas frequentes (FAQ)?" },
+      { type: "text", name: "q38", label: "Haverá uma funcionalidade de carrinho abandonado com lembretes por e-mail?" },
     ],
   },
   {
     title: "Pagamento e Logística",
     fields: [
-      { type: "text", name: "q19", label: "Quais métodos de pagamento serão aceitos?" },
-      { type: "text", name: "q21", label: "Quais empresas de entregas serão integradas?" },
-      { type: "text", name: "q26", label: "As notas fiscais serão geradas automaticamente? Qual plataforma?" },
+      { type: "textarea", name: "q4", label: "Quais são as políticas de retorno e troca para os produtos?" },
+      { type: "text", name: "q15", label: "Quais métodos de pagamento serão aceitos (cartão de crédito, débito, PIX etc.)?" },
+      { type: "text", name: "q16", label: "Haverá integração com qual plataforma de pagamento? (recomendamos o Pagar.me)" },
+      { type: "text", name: "q17", label: "Quais as empresas de entregas serão integradas? (Correios, Transportadoras etc)" },
+      { type: "text", name: "q18", label: "Quais serão as opções de entrega (frete, retirada na loja, entrega expressa)?" },
+      { type: "textarea", name: "q20", label: "Quais serão as políticas de devolução e reembolso?" },
+      { type: "text", name: "q30", label: "Quais são os prazos de devolução de produtos?" },
+      { type: "text", name: "q32", label: "Se for o caso, quais transportadoras serão usadas?" },
+      { type: "text", name: "q39", label: "As notas fiscais serão geradas automaticamente depois da entrega? Qual plataforma de geração?" },
     ],
   },
   {
     title: "Identidade Visual",
     fields: [
-      { type: "text", name: "q27", label: "Quais cores e tema serão usados no site?" },
-      { type: "text", name: "q28", label: "Há alguma referência de concorrente para a homepage?" },
+      { type: "text", name: "q23", label: "Quais cores e tema serão usados no site?" },
+      { type: "text", name: "q24", label: "Há alguma referencia de algum concorrente para a homepage?" },
+      { type: "text", name: "q29", label: "A marca está registrada no INPI?" },
     ],
   },
   {
     title: "Painel e ERP",
     fields: [
-      { type: "text", name: "q31", label: "Haverá integração com sistemas de ERP ou CRM? Quais?" },
-      { type: "text", name: "q36", label: "Como o estoque deve ser monitorado e atualizado?" },
+      { type: "text", name: "q21", label: "Haverá integração com sistemas de ERP ou CRM? Se sim, quais integrações?" },
+      { type: "textarea", name: "q27", label: "No painel de controle, quais permissões de usuário e níveis de acesso serão necessários?" },
+      { type: "textarea", name: "q28", label: "No painel de controle, quais tipos de relatórios serão necessários (vendas, estoque, desempenho)?" },
+      { type: "text", name: "q31", label: "Haverá notificações automáticas de baixo estoque?" },
+      { type: "textarea", name: "q40", label: "Como você quer que o estoque seja monitorado e atualizado? Tem algum sistema como referencia?" },
     ],
   },
   {
     title: "Dados e Conformidade",
     fields: [
-      { type: "text", name: "q38", label: "Quais dados serão coletados no cadastro do cliente?" },
-      { type: "text", name: "q40", label: "Será feito tráfego pago para o site? Quais canais?" },
+      { type: "text", name: "q33", label: "Quais dados serão coletados no cadastro do cliente no site?" },
+      { type: "text", name: "q34", label: "Haverá uma opção para os usuários excluírem suas contas e dados?" },
+      { type: "text", name: "q35", label: "Será feito tráfego para o site? Se sim, quais canais?" },
+      { type: "text", name: "q37", label: "Haverá integração com o Google Shopping?" },
     ],
   },
 ];
@@ -281,7 +303,7 @@ const BriefingForm = () => {
               </div>
               <h2 className="text-2xl font-medium text-white">Pronto para finalizar?</h2>
               <p className="text-white/60">
-                Revisámos todos os pontos principais do seu e-commerce. Clique no botão abaixo para
+                Revisamos todos os pontos principais do seu e-commerce. Clique no botão abaixo para
                 submeter o seu briefing.
               </p>
             </div>
