@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import * as motion from "framer-motion/client";
+import Image from "next/image";
 import { Services } from "@/components/sections/Services";
 import { Clients } from "@/components/sections/Clients";
 import { Contact } from "@/components/sections/Contact";
@@ -21,44 +22,10 @@ function Hero() {
       </div>
 
       {/* Navigation Layer */}
-      <nav className="w-full max-w-7xl mx-auto px-8 py-6 grid grid-cols-3 items-center z-10">
+      <nav className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 grid grid-cols-2 md:grid-cols-3 items-center z-10">
         {/* Left: Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <motion.div
-            whileHover={{ rotate: 180 }}
-            transition={{ duration: 0.5 }}
-            className="w-10 h-10 flex items-center justify-center text-white"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L2 7L12 12L22 7L12 2Z"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 17L12 22L22 17"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 12L12 17L22 12"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </motion.div>
-          <span className="text-2xl font-medium tracking-tight text-white">
-            Feltec
-          </span>
+        <div className="flex items-center cursor-pointer">
+          <Image src="/logo.svg" alt="Feltec" width={140} height={43} className="h-8 w-auto brightness-0 invert" priority />
         </div>
 
         {/* Center: Nav links */}
@@ -73,7 +40,7 @@ function Hero() {
         {/* Right: CTA */}
         <div className="flex justify-end">
           <a href="#contact">
-            <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white font-medium rounded-full cursor-pointer px-6">
+            <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white font-medium rounded-full cursor-pointer px-4 py-3 md:px-6 md:py-2 text-xs md:text-sm min-h-[44px]">
               Fale Conosco
             </Button>
           </a>

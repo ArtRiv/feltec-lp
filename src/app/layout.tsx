@@ -11,6 +11,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Feltec",
   description: "Soluções tecnológicas como landing pages, ERPs, CRMs, automações de processos e muito mais.",
+  icons: {
+    icon: "/logo-tiny.png",
+    apple: "/logo-tiny.png",
+  },
 };
 
 export default function RootLayout({
