@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:\\\\Users\\\\Arthu\\\\Desktop\\\\code\\\\feltech_main\\\\feltech\\\\public\\\\logo.svg\" \"C:\\\\Users\\\\Arthu\\\\Desktop\\\\code\\\\feltech_main\\\\feltech\\\\.claude\\\\worktrees\\\\determined-williamson\\\\public\\\\logo.svg\")",
+      "Bash(cp \"C:\\\\Users\\\\Arthu\\\\Desktop\\\\code\\\\feltech_main\\\\feltech\\\\public\\\\logo-tiny.png\" \"C:\\\\Users\\\\Arthu\\\\Desktop\\\\code\\\\feltech_main\\\\feltech\\\\.claude\\\\worktrees\\\\determined-williamson\\\\public\\\\logo-tiny.png\")",
+      "Bash(gh pr create --title 'feat: update branding — logo, favicon, mobile button, card color' --body ':*)",
+      "Bash(where gh.exe)",
+      "Read(//c/Program Files/GitHub CLI/**)",
+      "Read(//c/Users/Arthu/AppData/Local/GitHub CLI/**)",
+      "Read(//c/ProgramData/chocolatey/bin/**)",
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(cmd.exe /c \"gh --version\")"
+    ]
+  }
+}
