@@ -30,7 +30,7 @@ export function Contact() {
                     </p>
 
                     <div className="space-y-4 text-white/80">
-                        <p><strong>E-mail:</strong> feltecadmin@gmail.com</p>
+                        <p><strong>E-mail:</strong> feltec@fel.tec.br</p>
                         <p><strong>Localização:</strong> Florianópolis, Santa Catarina</p>
                     </div>
                 </motion.div>
