@@ -174,7 +174,34 @@ Gerado via Sistema Feltec`;
 
     setIsSubmitting(true);
     try {
-      const payload = { ...formData, q3_freight: formData.q3_freight.join('; ') };
+      // Mapeamento exato das chaves que o seu Google Apps Script espera
+      const payload = {
+        company: formData.client_company,
+        name: formData.client_name,
+        contact: formData.client_contact,
+        q1_stage: formData.q1_stage,
+        q1_orders: formData.q1_orders,
+        q1_manager: formData.q1_manager,
+        q2_skus: formData.q2_skus,
+        q2_variations: formData.q2_variations,
+        q2_special: formData.q2_special,
+        q2_special_details: formData.q2_special_details,
+        q2_erp: formData.q2_erp,
+        q2_erp_details: formData.q2_erp_details,
+        q3_origin: formData.q3_origin,
+        q3_freight: formData.q3_freight.join('; '),
+        q3_pickup: formData.q3_pickup,
+        q3_pickup_details: formData.q3_pickup_details,
+        q4_checkout: formData.q4_checkout,
+        q4_installments: formData.q4_installments,
+        q5_brand: formData.q5_brand,
+        q5_references: formData.q5_references,
+        q5_assets: formData.q5_assets,
+        q6_strategy: formData.q6_strategy,
+        q6_marketing_tools: formData.q6_marketing_tools,
+        data_local: new Date().toLocaleString('pt-BR') // Envia a hora exata do usuário
+      };
+
       await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
@@ -190,7 +217,6 @@ Gerado via Sistema Feltec`;
       setIsSubmitting(false);
     }
   };
-
   // Helper Components for Interactive Options
   const RadioOption = ({ name, value, label }: { name: string, value: string, label: string }) => {
     const isSelected = formData[name as keyof typeof formData] === value;
