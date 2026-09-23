@@ -7,7 +7,7 @@ import {
   CheckCircle, AlertCircle 
 } from 'lucide-react';
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxVr5EZZUIaiq-N8OsYJJvzepJOu4R5qT--apFHBZPrIVRD4XFdaGfJrgDbvc2oBYw0/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbySk7fpkIbEAo27ALRgPkv412hIbrhhv_X6y9Gx-M0LGLolmdGQ55TZvaEEDOqYILL6/exec';
 
 export default function BriefingForm() {
   const totalSteps = 7;
